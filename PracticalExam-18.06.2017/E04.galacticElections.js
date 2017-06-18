@@ -57,15 +57,8 @@ function solver(arraySystems) {
         })
 
     }
-    // console.log();
-    // console.log(totalVoterInUniverse);
-    // console.log(candidatesAggregatedResults);
-    // for (let candidate in candidatesAggregatedResults) {
-    //     console.log(candidatesAggregatedResults[candidate].listSystemsWon)
-    // }
+
     let sortedCandidatesAggregatedResults = sortAssociativeArray(candidatesAggregatedResults);
-    // console.log();
-    // console.log(sortedCandidatesAggregatedResults);
 
     let candidate1 = sortedCandidatesAggregatedResults[0];
     let candidate2 = null;
@@ -92,9 +85,6 @@ function solver(arraySystems) {
     }else{
         console.log(`Runoff between ${candidate1.name} with ${candidate1.percentVoteWon}% and ${candidate2.name} with ${candidate2.percentVoteWon}%`)
     }
-    // console.log(candidate1);
-    // console.log(candidate2);
-
 
     function sortAssociativeArray(array) {
         // turn associative array to sortable array
@@ -106,8 +96,6 @@ function solver(arraySystems) {
 
         //  main sorting of the objects
         sortableArr.sort(function (a, b) {
-            // a = a[1];
-            // b = b[1];
 
             // sorting property of each object by criteria
             a.listSystemsWon.sort(function (system1, system2) {
@@ -120,18 +108,6 @@ function solver(arraySystems) {
 
             return b.totalVotes - a.totalVotes;
         });
-
-        // //    turn sortable array back to associative array
-        // let associativeArray = {};
-        // for(let i = 0; i<sortableArr.length; i++){
-        //     let key = sortableArr[i][0];
-        //     let value = sortableArr[i][1];
-        //     // needed because it shouldn't be in the output  - Judge wants that! :)
-        //     delete value.scores;
-        //
-        //     associativeArray[key] = value;
-        // }
-        // return associativeArray;
 
         return sortableArr;
     }

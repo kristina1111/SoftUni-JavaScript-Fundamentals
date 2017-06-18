@@ -1,14 +1,6 @@
 function solver(message) {
     let testMessage = message.split('').filter(e=>e!='\n').join('');
-    // let cntParagraphs = 0;
 
-    // let positionNewLine = message.indexOf('\n');
-    // while (positionNewLine != -1){
-    //     cntParagraphs++;
-    //     positionNewLine = message.indexOf('\n', positionNewLine+1)
-    //
-    // }
-    // console.log(test);
     const regexMessageFormatValidation = /(^)<message.*?>.*?<\/message>($)/gm;
     if(testMessage.match(regexMessageFormatValidation) == null){
         console.log('Invalid message format');
@@ -52,9 +44,6 @@ function solver(message) {
     output += '  </div>\n';
     output += '</article>';
 
-    // console.log(messageBody);
-    // console.log(receiverString);
-    // console.log(senderString);
     console.log(output);
 
 }
