@@ -25,7 +25,6 @@ function solver(arr) {
                 arr.removeAt(i-1);
                 arr.removeAt(i-1);
                 arr.removeAt(i-1);
-                // arr = arr.removeAt(i).removeAt(i+1);
                 break;
             }else{
                 if(i==arr.length-1){
