@@ -8,8 +8,8 @@ function solver(arraySystems) {
         if (!systemsAggregatedResults.hasOwnProperty(system.system)) {
             systemsAggregatedResults[system.system] = {
                 name: system.system,
-                candidates: {}, // {}
-                numberOfVotes: 0, // 0
+                candidates: {},
+                numberOfVotes: 0,
                 getWinner: function (array) {
                     let sortedArray = [];
                     for (let key in array) {
